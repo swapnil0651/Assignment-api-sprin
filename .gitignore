@@ -58,4 +58,13 @@ buildNumber.properties
 application-*.yml
 !application.yml
 *.env
-.env* 
+.env*
+
+### Docker ###
+.docker/
+docker-compose.override.yml
+*.env.docker
+
+### OS Specific ###
+.DS_Store
+Thumbs.db 
