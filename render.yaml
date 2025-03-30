@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: bookstore-api
+    env: docker
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: bookstore_db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: bookstore_db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: bookstore_db
+          property: password
+
+databases:
+  - name: bookstore_db
+    databaseName: bookstore
+    plan: free 
