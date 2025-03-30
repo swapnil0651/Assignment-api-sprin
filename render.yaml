@@ -8,17 +8,11 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: SPRING_DATASOURCE_URL
-        fromDatabase:
-          name: bookstore_db
-          property: connectionString
+        value: jdbc:postgresql://dpg-cvkj9t0dl3ps738k4ulg-a/bookstore_fub5
       - key: SPRING_DATASOURCE_USERNAME
-        fromDatabase:
-          name: bookstore_db
-          property: user
+        value: bookstore_fub5_user
       - key: SPRING_DATASOURCE_PASSWORD
-        fromDatabase:
-          name: bookstore_db
-          property: password
+        value: 7SlmJZkw4BkWspEtq4pAGHX69SJBasH4
 
 databases:
   - name: bookstore_db
