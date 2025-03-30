@@ -8,11 +8,13 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://dpg-cvkj9t0dl3ps738k4ulg-a/bookstore_fub5
+        value: jdbc:postgresql://dpg-cvkj9t0dl3ps738k4ulg-a.oregon-postgres.render.com:5432/bookstore_fub5
       - key: SPRING_DATASOURCE_USERNAME
         value: bookstore_fub5_user
       - key: SPRING_DATASOURCE_PASSWORD
         value: 7SlmJZkw4BkWspEtq4pAGHX69SJBasH4
+      - key: PORT
+        value: 10000
 
 databases:
   - name: bookstore_db
