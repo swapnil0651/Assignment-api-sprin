@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-cvkj9t0dl3ps738k4ulg-a/bookstore_fub5
+    username: bookstore_fub5_user
+    password: 7SlmJZkw4BkWspEtq4pAGHX69SJBasH4
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: ${PORT:8081}
+
+springdoc:
+  swagger-ui:
+    enabled: true 
