@@ -1,19 +1,26 @@
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-cvkj9t0dl3ps738k4ulg-a/bookstore_fub5
+    url: jdbc:postgresql://dpg-cvkj9t0dl3ps738k4ulg-a.oregon-postgres.render.com:5432/bookstore_fub5
     username: bookstore_fub5_user
     password: 7SlmJZkw4BkWspEtq4pAGHX69SJBasH4
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
 
 server:
-  port: ${PORT:8081}
+  port: ${PORT:10000}
+  servlet:
+    context-path: /api
 
 springdoc:
   swagger-ui:
-    enabled: true 
+    path: /swagger-ui.html 
